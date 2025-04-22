@@ -1,0 +1,20 @@
+All Components
+
+Microcontroller
+1 x ESP32
+
+Sensors
+1 x DHT11
+1 x Soil Moisture Sensor
+1 x Soil PH Sensor
+
+Actuators
+2 x Water Pump
+1 x Mini Ultrasonic Mist Module
+
+Power Supply
+2 x Battery Pack
+
+Tanks & Frames
+3 x Plastic Bottles
+1 x Wireframes
