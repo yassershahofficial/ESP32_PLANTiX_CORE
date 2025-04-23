@@ -10,8 +10,8 @@ const plant = db.ref("Plant1");
 
 function updateDisplay(data){
     document.getElementById("status").textContent = `Status : ${data.Status}`;
-    document.getElementById("temperature").textContent = `Temperature : ${data.Temperature} °C`;
-    document.getElementById("humidity").textContent = `Humidity : ${data.Humidity} %`;
+    document.getElementById("temperature").textContent = `${data.Temperature} °C`;
+    document.getElementById("humidity").textContent = `${data.Humidity} %`;
 };
 
 function showError(error){

@@ -9,12 +9,41 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics-compat.js"></script>
 
+  <!-- styling CSS -->
+   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <h1>Real Time Data</h1>
-  <p id="status">Status : -- </p>
-  <p id="temperature">Temperature : -- °C</p>
-  <p id="humidity">Humidity : -- %</p>
+  <h1>PLANTiX CORE</h1>
+
+  <main>
+    <div class="upper">
+      <div class="upper-plant">
+        <div class="upper-plant-text">
+          <h2>PLANT 1</h2>
+          <p id="status">Status : -- </p>
+        </div>
+        <img src="img/plant1.png" alt="Plant1">
+      </div>
+      <div class="upper-conditions">
+        <h3>CONDITIONS :</h3>
+        <div class="upper-conditions-data">
+          <p>Temperature : </p>
+          <p id="temperature">-- °C</p>
+        </div>
+        <div class="upper-conditions-data">
+          <p>Humidity : </p>
+          <p id="humidity">-- %</p>
+        </div>
+        <div class="upper-conditions-data">
+          <p>PH Value : </p>
+          <p id="humidity">-- %</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower"></div>
+  </main>
 
   <p id="errormsg" style="color: red;"></p>
 
