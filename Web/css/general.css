@@ -1,0 +1,42 @@
+:root, *, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    --fonts-color: #10413A;
+    /* Color Palattes */
+    --green: #2A645C;
+    --white: #fbfbfb;
+    --grey: #F3F1F2;
+    /* Btns colors */
+    --combo1: #00AA77;
+    --combo2: #DC8758;
+    --combo3: #C132F3;
+    --combo4: #26CAEE;
+    /* Connection colors */
+    --connected: #00AA77;
+    --disconnected: #FF0000;
+
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--fonts-color);
+}
+button{
+    border: none;
+    cursor: pointer;
+    color: var(--fonts-color);
+}
+button:hover{
+    opacity: 0.8;
+}
+button:active{
+    opacity: 0.5;
+}
+i{
+    cursor: pointer;
+}
+.mar-bot-3{
+    margin-bottom: 3rem;
+}
