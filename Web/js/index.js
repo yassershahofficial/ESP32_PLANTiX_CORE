@@ -9,10 +9,11 @@ const db = firebase.database();
 const plant = db.ref("Plant1"); 
 
 function updateDisplay(data){
-    document.getElementById("status").textContent = `Status : ${data.Status}`;
-    document.getElementById("temperature").textContent = `${data.Temperature} °C`;
-    document.getElementById("humidity").textContent = `${data.Humidity} %`;
-};
+    console.log("Starting");
+    document.getElementById("Temperature").textContent = `${data.Temperature}°C`;
+    document.getElementById("Humidity").textContent =`${data.Humidity}%`;
+    console.log("Pass Through");
+}
 
 function showError(error){
     document.getElementById("errormsg").textContent = `Error connecting to Firebase: ${error.message}`;

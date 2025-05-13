@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenProbe</title>
 
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics-compat.js"></script>
+
     <!-- CSS Styling-->
     <link rel="stylesheet" href="../css/plant.css">
     <link rel="stylesheet" href="../css/general.css">
@@ -20,7 +25,7 @@
 <body>
     <main class="plant">
         <div class="plant-title">
-            <i class="fi fi-sr-angle-left"></i>
+            <i class="fi fi-sr-angle-left" id="plant-title__redirect"></i>
             <h2>Silver Leaf Philondendrons</h2>
             <i class="fi fi-sr-heart"></i>
         </div>
@@ -30,20 +35,24 @@
         <div class="plant-meter">
             <div class="plant-meter-sub">
                 <label for="Temperature">Temperature</label>
-                <h3>--°C</h3>
+                <h3 id="Temperature">--°C</h3>
             </div>
             <div class="plant-meter-sub">
                 <label for="Humidity">Humidity</label>
-                <h3>--%</h3>
+                <h3 id="Humidity">--%</h3>
             </div>
             <div class="plant-meter-sub">
                 <label for="PH Value">PH Value</label>
-                <h3>--%</h3>
+                <h3 id="Humidity">--%</h3>
             </div>
         </div>
         <div class="plant-btn">
             <button type="button">Adjust Controls</button>
         </div>
     </main>
+    <p id="errormsg" style="color: red;"></p>
+
+    <script type="module" src="../js/index.js"></script>
+    <script src="../js/event.js" defer></script>
 </body>
 </html>
