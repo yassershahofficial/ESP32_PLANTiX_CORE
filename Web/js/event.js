@@ -18,6 +18,10 @@ AddSafeListener("home-btn-3", "click", () => {
     window.location.href = "home.html";
 });
 
+AddSafeListener("menu-burger__redirect", "click", () => {
+    window.location.href = "index.html"
+});
+
 AddSafeListener("home-favourite-opt-redirect", "click", () => {
     window.location.href = "plant.html"
 });

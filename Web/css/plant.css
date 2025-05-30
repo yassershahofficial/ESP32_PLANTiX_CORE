@@ -2,7 +2,6 @@
     display: grid;
     grid-template-rows: 120px 1fr 1.2fr 100px;
     max-width: 800px;
-    height: 100vh;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
@@ -32,7 +31,9 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 20%));
     width: 100%;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 5%;
+    margin: 4% 0;
 }
 .plant-meter-sub{
     aspect-ratio: 1/1;
@@ -57,20 +58,18 @@
 
 @media (min-aspect-ratio: 1/1.8){
     .plant{
-        grid-template-rows: 150px 2fr 1fr 100px;
+        grid-template-rows: 150px 2fr 1fr 1fr;
         height: 100vh;
     }
 }
 
 @media (min-width: 800px) and (min-height: 1100px){
     .plant{
-        grid-template-rows: 150px 600px 1fr 100px;
-        height: 100vh;
+        grid-template-rows: 150px 500px 1fr 1fr;  
+        height: 100vh;      
     }
     .plant-meter{
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr 1fr;
-        height: 90%;
+        height: 90%
     }
 }
 
