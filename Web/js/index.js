@@ -10,8 +10,8 @@ const plant = db.ref("Plant1");
 
 function updateDisplay(data){
     console.log("Starting");
-    document.getElementById("Temperature").textContent = `${data.Temperature}°C`;
-    document.getElementById("Humidity").textContent =`${data.Humidity}%`;
+    document.getElementById("Temperature").textContent = Math.round(data.Temperature);
+    document.getElementById("Humidity").textContent = Math.round(data.Humidity);
     console.log("Pass Through");
 }
 

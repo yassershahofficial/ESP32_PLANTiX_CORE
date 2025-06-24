@@ -26,6 +26,14 @@ AddSafeListener("home-favourite-opt-redirect", "click", () => {
     window.location.href = "plant.html"
 });
 
+AddSafeListener("home-favourite-opt-redirect-non", "click", () => {
+    window.location.href = "no_plant.html"
+});
+
+AddSafeListener("home-favourite-opt-redirect-non2", "click", () => {
+    window.location.href = "no_plant.html"
+});
+
 AddSafeListener("plant-title__redirect", "click", () => {
     window.location.href = "home.html"
 })

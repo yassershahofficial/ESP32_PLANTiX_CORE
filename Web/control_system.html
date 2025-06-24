@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenProbe</title>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics-compat.js"></script>
+
+    <!-- CSS Styling-->
+    <link rel="stylesheet" href="css/control_system.css">
+    <link rel="stylesheet" href="css/general.css">
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- flaticon Icons-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+</head>
+<body>
+    <div class="control">
+        <h1>Control System</h1>
+        <div class="control-readings">
+            <h2>Readings</h2>
+            <div class="control-readings-sub">
+                <i class="fi fi-sr-temperature-high"></i>
+                <label for="Temperature">Temperature</label>
+                <p id="Temperature">--</p>
+                <p>°C</p> 
+            </div>
+            <div class="control-readings-sub">
+                <i class="fi fi-sr-raindrops"></i>
+                <label for="Humidity">Humidity</label>
+                <p id="Humidity">--</p>
+                <p>%</p>
+            </div>
+            <div class="control-readings-sub">
+                <i class="fi fi-sr-chart-pyramid"></i>
+                <label for="PH Value">PH Value</label>
+                <p id="Humidity">--</p>
+            </div>
+        </div>
+        <div class="control-sys">
+            <div class="control-sys-sub">
+                <div>
+                    <i class="fi fi-sr-temperature-high"></i>
+                    <h3>Temperature</h3>
+                    <p>--</p>
+                </div>
+                <input type="range" min="0" max="50">
+            </div>
+            <div class="control-sys-sub">
+                <div>
+                    <i class="fi fi-sr-raindrops"></i>
+                    <h3>Humidity</h3>
+                    <p>--</p>
+                </div>
+                <input type="range" min="0" max="80">
+            </div>
+            <div class="control-sys-sub">
+                <div>
+                    <i class="fi fi-sr-chart-pyramid"></i>
+                    <h3>PH</h3>
+                    <p>--</p>
+                </div>
+                <input type="range" min="0" max="14">
+            </div>
+        </div>
+        <div class="control-btns">
+            <button type="button">Update</button>
+            <button type="button">Cancel</button>
+        </div>
+    </div>
+    
+<script>
+    
+document.querySelectorAll(".control-sys-sub").forEach(section => {
+    const slider = section.querySelector("input[type='range']");
+    const view = section.querySelector("p");
+
+    view.textContent = slider.value;
+
+    slider.addEventListener("input", () =>{
+        view.textContent = slider.value;
+    })
+
+})
+</script>
+    <p id="errormsg" style="color: red;"></p>
+
+    <script type="module" src="js/index.js"></script>
+    <script src="js/event.js" defer></script>
+</body>
+</html>

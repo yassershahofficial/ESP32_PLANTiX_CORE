@@ -37,8 +37,8 @@ button:active{
 i{
     cursor: pointer;
 }
-.mar-bot-3{
-    margin-bottom: 3rem;
+.mar-bot-10p{
+    margin-bottom: 10%;
 }
 .small-circle{
     width: 10px;
@@ -50,4 +50,8 @@ i{
 }
 .green{
     background-color: var(--connected);
+}
+.rectangle-fill{
+    background-color: var(--green);
+    width: 100%;
 }
