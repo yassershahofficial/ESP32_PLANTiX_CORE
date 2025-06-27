@@ -72,24 +72,14 @@
             </div>
         </div>
         <div class="control-btns">
-            <button type="button">Update</button>
-            <button type="button">Cancel</button>
+            <button type="button" id="control-btns-update">Update</button>
+            <button type="button" id="control-btns-cancel">Cancel</button>
         </div>
     </div>
     
 <script>
     
-document.querySelectorAll(".control-sys-sub").forEach(section => {
-    const slider = section.querySelector("input[type='range']");
-    const view = section.querySelector("p");
 
-    view.textContent = slider.value;
-
-    slider.addEventListener("input", () =>{
-        view.textContent = slider.value;
-    })
-
-})
 </script>
     <p id="errormsg" style="color: red;"></p>
 

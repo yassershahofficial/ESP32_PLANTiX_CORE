@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem 3rem;
-    width: min(100%,600px);
+    width: min(100%,800px);
     border-radius: 25px;
 }
 .control-readings-sub{

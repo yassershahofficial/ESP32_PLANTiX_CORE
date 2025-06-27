@@ -1,2 +1,3 @@
 Firmware/secret.h
+Firmware/esp32_randomAllData_Wifi_Firebase/secret.h
 Web/js/firebaseConfig.js
