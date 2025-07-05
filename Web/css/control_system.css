@@ -27,7 +27,10 @@
 }
 .control-readings-sub{
     display: grid;
-    grid-template-columns: 3rem 3fr 1fr 1rem;
+    grid-template-columns: 3rem 3fr 2fr 1rem;
+}
+.control-readings-sub p{
+    text-align: center;
 }
 .control-sys{
     display: flex;

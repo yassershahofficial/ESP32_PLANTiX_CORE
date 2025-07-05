@@ -7,6 +7,7 @@
 
     <!-- CSS Styling-->
     <link rel="stylesheet" href="css/plant.css">
+    <link rel="stylesheet" href="css/no_plant.css">
     <link rel="stylesheet" href="css/general.css">
 
     <!-- Google Fonts-->
@@ -25,20 +26,20 @@
         </div>
         <div class="plant-title">
             <div class="plant-title-wrapper">
-                <img src="img/Plant1.png" alt="">
+                <img src="img/Plant2.png" alt="">
             </div>
             <div class="plant-title-name">
-                <h2>Silver Leaf Philondendrons</h2>
+                <h2>Case Iron Aspidistra Elatior</h2>
                 <div class="rectangle-fill"></div>
             </div>
         </div>
         <div class="plant-meter">
             <div class="plant-meter-sub">
                 <div>
-                    <h3 id="Temperature">--</h3>
+                    <h3>--</h3>
                     <h4>°C</h4>
                 </div>
-                <h4>Normal</h4>
+                <h4>NULL</h4>
                 <div>
                     <i class="fi fi-sr-temperature-high"></i>
                     <label for="Temperature">Temperature</label>
@@ -46,10 +47,10 @@
             </div>
             <div class="plant-meter-sub">
                 <div>
-                    <h3 id="Humidity">--</h3>
+                    <h3>--</h3>
                     <h4>%</h4>
                 </div>
-                <h4>Normal</h4>
+                <h4>NULL</h4>
                 <div>
                     <i class="fi fi-sr-raindrops"></i>
                     <label for="Humidity">Humidity</label>
@@ -57,13 +58,23 @@
             </div>
             <div class="plant-meter-sub">
                 <div>
-                    <h3 id="Humidity">--</h3>
+                    <h3>--</h3>
                     <h4>%</h4>
                 </div>
-                <h4>Normal</h4>
+                <h4>NULL</h4>
+                <div>
+                    <i class="fi fi-sr-mound"></i>
+                    <label for="Soil_Moisture">Soil Moisture</label>
+                </div>
+            </div>
+            <div class="plant-meter-sub">
+                <div>
+                    <h3>--</h3> 
+                </div>
+                <h4>NULL</h4>
                 <div>
                     <i class="fi fi-sr-chart-pyramid"></i>
-                    <label for="PH Value">PH Value</label>
+                    <label for="PH_Value">PH Value</label>
                 </div>
             </div>
         </div>
@@ -71,8 +82,9 @@
             <button type="button">Advanced View</button>
             <button type="button">Control System</button>
         </div>
-
-        <script src="js/event.js" defer></script>
     </main>
+    <p id="errormsg" style="color: red;"></p>
+
+    <script src="js/event.js" defer></script>
 </body>
 </html>

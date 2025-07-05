@@ -3,7 +3,7 @@
 #define PHpin A0  
 
 //Fertilizer Pump Relay
-#define FertPumpRelay 9
+#define FertPumpRelay 8
 
 //PH-FertilizerPump Variables
 int PHstable = 7;
@@ -15,6 +15,7 @@ void setup() {
 
   //PH-FertilizerPump
   pinMode(FertPumpRelay, OUTPUT);
+  digitalWrite(FertPumpRelay, LOW);
 }
 
 void loop() {

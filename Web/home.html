@@ -8,6 +8,7 @@
     <!-- CSS Styling-->
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chatbot.css">
 
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +18,9 @@
     <!-- flaticon Icons-->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-
+    
+    <!-- QR Code Scanner-->
+    <script src="https://unpkg.com/html5-qrcode" defer></script>
 </head>
 <body>
     <main class="home">
@@ -29,25 +32,25 @@
             <div class="home-top-search">
                 <i class="fi fi-rr-search"></i>
                 <p>Find your plant</p>
-                <i class="fi fi-rr-qr-scan"></i>
+                <i class="fi fi-rr-qr-scan" id="qr-scan-trigger"></i>
             </div>
         </div>
         <div class="home-category mar-bot-10p">
             <h2>Plant Category</h2>
             <div class="home-category-opt">
-                <div class="home-category-opt-sub">
+                <div class="home-category-opt-sub" id="home-category-opt-sub1">
                     <i class="fi fi-sr-daisy-alt"></i>
                     <p>Outdoor</p>
                 </div>
-                <div class="home-category-opt-sub">
+                <div class="home-category-opt-sub" id="home-category-opt-sub2">
                     <i class="fi fi-sr-house-chimney-heart"></i>
                     <p>Indoor</p>
                 </div>
-                <div class="home-category-opt-sub">
+                <div class="home-category-opt-sub" id="home-category-opt-sub3">
                     <i class="fi fi-sr-city"></i>
                     <p>Office</p>
                 </div>
-                <div class="home-category-opt-sub">
+                <div class="home-category-opt-sub" id="home-category-opt-sub4">
                     <i class="fi fi-sr-boxes"></i>
                     <p>Other</p>
                 </div>
@@ -72,9 +75,9 @@
                         <div class="small-circle red"></div>
                         <p>Not Connected</p>
                     </div>
-                    <img src="img/Plant1.png" alt="">
+                    <img src="img/Plant2.png" alt="">
                     <div class="home-favourite-opt-sub-name">
-                        <p>Silver Leaf Philondendrons</p>
+                        <p>Case Iron Aspidistra Elatior</p>
                         <i class="fi fi-sr-heart"></i>
                     </div>
                 </div>
@@ -83,14 +86,25 @@
                         <div class="small-circle red"></div>
                         <p>Not Connected</p>
                     </div>
-                    <img src="img/Plant1.png" alt="">
+                    <img src="img/Plant3.png" alt="">
                     <div class="home-favourite-opt-sub-name">
-                        <p>Silver Leaf Philondendrons</p>
+                        <p>Nelumbo Nucifer (Lotus plant)</p>
                         <i class="fi fi-sr-heart"></i>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div id="qr-reader-wrapper" class="qr-wrapper">
+            <div id="qr-reader" class="qr-reader mar-bot-10p"></div>
+            <i id="qr-close" class="fi fi-sr-cross-circle"></i>
+        </div>
+        <div class="qr-fillspace" id="qr-fillspace"></div>
+
+        <div class="chatbot-btn" id="chatbot">
+            <i class="fi fi-sr-user-robot"></i>
+        </div>
+
     </main>
 
     <script src="js/event.js" defer></script>

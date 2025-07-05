@@ -1,12 +1,12 @@
 
 //Soil Sensor
-#define SOILpin A1
+#define SOILpin A0
 
 //Water Pump Relay
-#define WaterPumpRelay 7
+#define WaterPumpRelay 2
 
 //SOIL-WaterPump Variables
-int SOILstable = 50;
+int SOILstable = 40;
 int SOILrange = 5;
 int SOILcounter = 5;
 

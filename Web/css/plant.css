@@ -17,6 +17,9 @@
     padding: 1rem 1.5rem;
     font-size: 1.3rem;
 }
+.plant-nav i{
+    padding: 0.6rem 1rem;
+}
 .plant-title{
     display: flex;
     flex-direction: column;
@@ -53,9 +56,12 @@
     flex: 0 0 auto;
     width: 60%;
     aspect-ratio: 1/1;
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
+    justify-content: center;
     align-content: center;
+    align-items: center;
     border-radius: 35px;
     scroll-snap-align: start;
 }

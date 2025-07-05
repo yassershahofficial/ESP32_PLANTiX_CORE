@@ -40,9 +40,15 @@
                 <p>%</p>
             </div>
             <div class="control-readings-sub">
+                <i class="fi fi-sr-mound"></i>
+                <label for="Soil_Moisture">Soil Moisture</label>
+                <p id="Soil_Moisture">--</p>
+                <p>%</p> 
+            </div>
+            <div class="control-readings-sub">
                 <i class="fi fi-sr-chart-pyramid"></i>
-                <label for="PH Value">PH Value</label>
-                <p id="Humidity">--</p>
+                <label for="PH_Value">PH Value</label>
+                <p id="PH_Value">--</p>
             </div>
         </div>
         <div class="control-sys">
@@ -52,7 +58,7 @@
                     <h3>Temperature</h3>
                     <p>--</p>
                 </div>
-                <input type="range" min="0" max="50">
+                <input type="range" min="0" max="100">
             </div>
             <div class="control-sys-sub">
                 <div>
@@ -60,7 +66,15 @@
                     <h3>Humidity</h3>
                     <p>--</p>
                 </div>
-                <input type="range" min="0" max="80">
+                <input type="range" min="0" max="100">
+            </div>
+            <div class="control-sys-sub">
+                <div>
+                    <i class="fi fi-sr-mound"></i>
+                    <h3>Soil Moisture</h3>
+                    <p>--</p>
+                </div>
+                <input type="range" min="0" max="100">
             </div>
             <div class="control-sys-sub">
                 <div>
@@ -76,11 +90,7 @@
             <button type="button" id="control-btns-cancel">Cancel</button>
         </div>
     </div>
-    
-<script>
-    
 
-</script>
     <p id="errormsg" style="color: red;"></p>
 
     <script type="module" src="js/index.js"></script>

@@ -11,6 +11,7 @@ const int systemdelay = 1000;
 const int statedelay = 200;
 
 float temperature, humidity, soil, ph;
+float stableTemperature, stableHumidity, stableSoil, stablePH;
 
 void DotLoops(int countdown){
   for(int i = 0; i < countdown; i++){
@@ -114,23 +115,26 @@ void SendingData(){
   Serial.println("...................");
 }
 
-/**
+
 void RetriveData(){
   Serial.print("Retrieving data from Firebase.");
   DotLoops(4);
-  String Retrieved_Serialized_JSON =  fb.getJson("Plant1");
-  JsonDocument Retrieved_Plant1;
-  deserializeJson(Retrieved_Plant1, Retrieved_Serialized_JSON);
+  String Retrieved_Serialized_JSON = fb.getJson("Plant1Requirements");
+  JsonDocument Retrieved_Plant1Requirements;
+  deserializeJson(Retrieved_Plant1Requirements, Retrieved_Serialized_JSON);
 
   DotLoops(2);
-  String Status = Retrieved_Plant1["Status"];
-  float Temperature = Retrieved_Plant1["Temperature"];
-  float Humidity = Retrieved_Plant1["Humidity"];
+  stableTemperature = Retrieved_Plant1Requirements["StableTemperature"];
+  stableHumidity = Retrieved_Plant1Requirements["StableHumidity"];
+  stableSoil = Retrieved_Plant1Requirements["StableSoil_Moisture"];
+  stablePH = Retrieved_Plant1Requirements["StablePH_Value"];
+
   Serial.println("\nData retrieved from Firebase.");
 
-  Serial.println("Status : " + String(Status));
-  Serial.println("Temperature : " + String(Temperature));
-  Serial.println("Humidity : " + String(Humidity));
+  Serial.println("stable Temperature : " + String(stableTemperature));
+  Serial.println("stable Humidity : " + String(stableHumidity));
+  Serial.println("stable Soil : " + String(stableSoil));
+  Serial.println("stable PH : " + String(stablePH));
   
   Serial.println("...................");
 }

@@ -6,11 +6,11 @@
 DHT dht(DHTpin, DHTtype);
 
 //Mist Module Relay
-#define MistRelay 8
+#define MistRelay 3
 
-//DHT-MistModule Variables
-int DHTstable = 50;
-int DHTrange = 5;
+//DHT-MistModule Variable                                                                                     s
+int DHTstable = 100;
+int DHTrange = 1;
 int DHTcounter = 5;
 
 void setup() {
@@ -22,6 +22,8 @@ void setup() {
 }
 
 void loop() {
+  delay(2000);
+  
   float temperature = dht.readTemperature(); // Celsius
   float humidity = dht.readHumidity(); // Percentage
 
@@ -52,5 +54,5 @@ void loop() {
   }
   if(DHTcounter < 100) DHTcounter++; //overflow
   
-  delay(2000);
+  
 }
