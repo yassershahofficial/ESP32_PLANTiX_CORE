@@ -1,14 +1,14 @@
 #include <WiFi.h>
 #include <Firebase.h>
 #include <ArduinoJson.h>
-#include "secret.h"
+#include "secrets.h"
 
 //Firebase object - Test Mode
 Firebase fb(FIREBASE_URL);
 
 const int dotdelay = 500;
 const int systemdelay = 1000;
-const int statedelay = 200;
+const int statedelay = 1000;
 
 float temperature, humidity, soil, ph;
 float stableTemperature, stableHumidity, stableSoil, stablePH;
@@ -24,7 +24,7 @@ void setup() {
   Serial.begin(115200);
   int counter = 0;
   delay(systemdelay);
-  
+
   //Wifi connection
   WiFi.begin(WIFI_ID, WIFI_PW);
   Serial.print("Connecting to the Wifi");
@@ -43,11 +43,12 @@ void setup() {
   Serial.println(WiFi.status());
   Serial.print("IP Address: ");
   Serial.println(WiFi.localIP());
+  Serial.println("...................");
 }
 
 void loop() {
-  //RetriveData();
-  //delay(statedelay);
+  RetriveData();
+  delay(statedelay);
   
   ReadingSensor();
   delay(statedelay);
@@ -138,4 +139,3 @@ void RetriveData(){
   
   Serial.println("...................");
 }
-**/

@@ -1,12 +1,12 @@
 
 //PH Sensor
-#define PHpin A0  
+#define PHpin 33
 
 //Fertilizer Pump Relay
-#define FertPumpRelay 8
+#define FertPumpRelay 25
 
 //PH-FertilizerPump Variables
-int PHstable = 7;
+int PHstable = 8;
 int PHrange = 1;
 int PHcounter = 5;
 
@@ -20,7 +20,7 @@ void setup() {
 
 void loop() {
   int PHanalogValue = analogRead(PHpin); // Read raw analog value (0–1023)
-  float voltage = PHanalogValue * (5.0 / 1023.0); // Convert to voltage
+  float voltage = PHanalogValue * (3.3 / 4095.0); // Convert to voltage
 
   //Adjust the slope/offset
   float pH = 7 + ((2.5 - voltage) / 0.18);  // Assumes 2.5V = pH 7

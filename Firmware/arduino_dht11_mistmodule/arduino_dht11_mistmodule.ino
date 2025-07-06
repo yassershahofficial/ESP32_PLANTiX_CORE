@@ -1,12 +1,12 @@
 #include <DHT.h>
 
 //DHT Sensor
-#define DHTpin 2
+#define DHTpin 21
 #define DHTtype DHT11
 DHT dht(DHTpin, DHTtype);
 
 //Mist Module Relay
-#define MistRelay 3
+#define MistRelay 23
 
 //DHT-MistModule Variable                                                                                     s
 int DHTstable = 100;

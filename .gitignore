@@ -1,3 +1,4 @@
-Firmware/secret.h
-Firmware/esp32_randomAllData_Wifi_Firebase/secret.h
+Firmware/esp32_randomAllData_Wifi_Firebase/secrets.h
+Firmware/esp32_allSA_send_received/secrets.h
+Firmware/esp32_allSA_SRfirebase_Completed/secrets.h
 Web/js/firebaseConfig.js

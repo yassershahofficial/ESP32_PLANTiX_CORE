@@ -1,9 +1,9 @@
 
 //Soil Sensor
-#define SOILpin A0
+#define SOILpin 32
 
 //Water Pump Relay
-#define WaterPumpRelay 2
+#define WaterPumpRelay 26
 
 //SOIL-WaterPump Variables
 int SOILstable = 40;

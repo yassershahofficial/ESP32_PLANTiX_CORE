@@ -1,8 +1,8 @@
 #include <WiFi.h>
 
 //wifi credentials
-#define WIFI_ID "id"
-#define WIFI_PW "password"
+#define WIFI_ID "Honor"
+#define WIFI_PW "bbyhensem"
 
 void setup() {
   Serial.begin(115200);
